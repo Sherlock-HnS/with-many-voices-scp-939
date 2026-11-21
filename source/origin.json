@@ -4,8 +4,8 @@
   "title": "[PILL PACK] With Many Voices | SCP-939",
   "author": "nexus",
   "status": "extracted_verified",
-  "acquisition": "existing_steam_client_installation",
-  "steamcmd_download_completed": false,
+  "acquisition": "steamcmd",
+  "steamcmd_download_completed": true,
   "source_workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776010437",
   "source_archive_sha256": "a3e4d94bb7bde0394ca8a9d79861479f38bb916a45bd2d0a8229468c2718ffc0",
   "gma_header": {
