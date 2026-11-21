@@ -2,6 +2,9 @@
   "source_files": 132,
   "packed_files": 132,
   "excluded_files": [],
-  "reason": "Unused software/Xbox model variants excluded by official GMod whitelist; original bytes remain in addon/ and Git.",
-  "reference": "https://github.com/Facepunch/gmad/blob/master/include/AddonWhiteList.h"
+  "package_tags": [
+    "roleplay",
+    "realism"
+  ],
+  "verified_with": "gmad create + SHA-256 por arquivo"
 }

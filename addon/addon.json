@@ -1,10 +1,9 @@
 {
-  "ignore": [],
+  "title": "[PILL PACK] With Many Voices | SCP-939",
+  "type": "entity",
   "tags": [
     "roleplay",
-    "realism",
-    "fun"
+    "realism"
   ],
-  "title": "[PILL PACK] With Many Voices | SCP-939",
-  "type": "entity"
+  "ignore": []
 }
