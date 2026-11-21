@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/nexus/scp/939/939spikescolor"
+    "$bumpmap" "models/nexus/scp/939/939spikesnormal"
+
+    "$halflambert" "1"
+    "$phong" "1"
+    "$phongboost" "1"
+    "$phongexponent" "5"
+    "$phongfresnelranges" "[0.05 0.5 1]"
+
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.04 0.04 0.04]"
+
+    "$surfaceprop" "flesh"
+}

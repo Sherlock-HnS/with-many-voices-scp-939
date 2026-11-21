@@ -1,0 +1,21 @@
+{
+  "id": "3776010437",
+  "name": "with-many-voices-scp-939",
+  "title": "[PILL PACK] With Many Voices | SCP-939",
+  "author": "nexus",
+  "status": "extracted_verified",
+  "acquisition": "existing_steam_client_installation",
+  "steamcmd_download_completed": false,
+  "source_workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776010437",
+  "source_archive_sha256": "a3e4d94bb7bde0394ca8a9d79861479f38bb916a45bd2d0a8229468c2718ffc0",
+  "gma_header": {
+    "title": "[PILL PACK] With Many Voices | SCP-939",
+    "description": "{\"title\":\"[PILL PACK] With Many Voices | SCP-939\",\"type\":\"entity\",\"tags\":[\"roleplay\",\"realism\",\"fun\"],\"ignore\":[]}",
+    "author": "Author Name",
+    "steam_id": "0",
+    "timestamp": 1785710256
+  },
+  "files": 132,
+  "payload_bytes": 108608902,
+  "roundtrip_verified": true
+}

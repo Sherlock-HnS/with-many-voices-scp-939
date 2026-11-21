@@ -1,0 +1,794 @@
+[
+  {
+    "path": "lua/autorun/939hud.lua",
+    "size": 10340,
+    "crc": 3022629038,
+    "sha256": "afbbe9e4bd4de282ef456eb20e2808bba97bb856556f89a7b83624dea48e7d71"
+  },
+  {
+    "path": "lua/autorun/include/939.lua",
+    "size": 145967,
+    "crc": 3494931116,
+    "sha256": "d9031ea7ae40e9fce093dd74e5b7bae12634ae09cf9d72c0f1b1d834db3ad327"
+  },
+  {
+    "path": "lua/autorun/pill_base939.lua",
+    "size": 597,
+    "crc": 2827661647,
+    "sha256": "cbd544110ed362c214cfecda1c5a62d16c0698bd93728f30021b5d675cb1c29c"
+  },
+  {
+    "path": "lua/autorun/sh_939.lua",
+    "size": 964,
+    "crc": 848026822,
+    "sha256": "5ac505a3962189d4e2e1aac21f1516164295a031e8f8b3fbfe439d52a8f2a472"
+  },
+  {
+    "path": "lua/wos/dynabase/registers/wmv_vuth_extendedanimations.lua",
+    "size": 1777,
+    "crc": 4100529327,
+    "sha256": "1ad1350eee32ff4944416c9a9e6486814439deec0216e71e16ed7d89c68a8df9"
+  },
+  {
+    "path": "materials/icon/scp_icon.png",
+    "size": 179634,
+    "crc": 2022013426,
+    "sha256": "cd09daff77c8ba762113911a49f14bb8daf041f4b444cff80925a3f5af7773cd"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939.vmt",
+    "size": 345,
+    "crc": 870077501,
+    "sha256": "9141969efa08c89bc1f33ec78493e64f9809b10445f7f6dddcc61daa2699e812"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939_spkies.vmt",
+    "size": 357,
+    "crc": 2955977576,
+    "sha256": "965985002c3029a9c6975c9aa2c1f79d951ee81d99d880fdc21d0ac739a661de"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939ambientocclusion.vtf",
+    "size": 5592640,
+    "crc": 1696849298,
+    "sha256": "5cf921965c58b4161f9eb5798b3bf154dec2113825718a45d7008ab31da3a694"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939color.vtf",
+    "size": 5592640,
+    "crc": 3240690279,
+    "sha256": "d010b1d0bc2516595496090041317ee3128e8b342d5f67e3bebff89b98749391"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939height.vtf",
+    "size": 5592640,
+    "crc": 1102647646,
+    "sha256": "5bf2a214a1c441d53210bf1787ad1378d99e316cc11e93934154d471042a7c50"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939metallic.vtf",
+    "size": 5592640,
+    "crc": 3890874745,
+    "sha256": "7e0828a6b757938aeee0133a1b305cca8bbeb67b942b6193a29803b21d4e8323"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939normal.vtf",
+    "size": 5592640,
+    "crc": 3666205926,
+    "sha256": "f761ff26601c698694ca1af315a80ff46154945be616ae522aa281251cfaac0e"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939roughness.vtf",
+    "size": 5592640,
+    "crc": 349659385,
+    "sha256": "aa343abcdd27d39845e8866b4e17526c38bb056e710676980fd768875c61173e"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939spikesambientocclusion.vtf",
+    "size": 5592640,
+    "crc": 2064067959,
+    "sha256": "eee3e432d781d8cee022ddcdc876339d21f815c20bfce3b7314c0974b8fb796b"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939spikescolor.vtf",
+    "size": 5592640,
+    "crc": 1036508258,
+    "sha256": "f047ebc0011fba6fced706fe8aead1e0df294675f570139942b3053af88ef938"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939spikesheight.vtf",
+    "size": 5592640,
+    "crc": 333206081,
+    "sha256": "aa91d39c67c6e77b88ab4cd5ada681717d3a4336568882e96af21f0cc697387a"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939spikesmetallic.vtf",
+    "size": 5592640,
+    "crc": 3890874745,
+    "sha256": "7e0828a6b757938aeee0133a1b305cca8bbeb67b942b6193a29803b21d4e8323"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939spikesnormal.vtf",
+    "size": 5592640,
+    "crc": 3683921409,
+    "sha256": "1cb470df24598f93663a5c65f528f39c7d7e4d10989bbee626790a924e76b84b"
+  },
+  {
+    "path": "materials/models/nexus/scp/939/939spikesroughness.vtf",
+    "size": 5592640,
+    "crc": 225499362,
+    "sha256": "4931f85cd57b50524b4bb17cfabae8dd13b5856390c2e5b4c4fadb06e6f58a0d"
+  },
+  {
+    "path": "materials/nexus/939/redviginettept1.vmt",
+    "size": 186,
+    "crc": 2021992264,
+    "sha256": "6d68a9d61bdb7cf8f8ec0ca5297329112faa2ece80649ec90d269069c982a575"
+  },
+  {
+    "path": "materials/nexus/939/redviginettept1.vtf",
+    "size": 524432,
+    "crc": 1118276836,
+    "sha256": "6300fdc62eb04c03f95b41278ea4d38fd0cd892ead6eaaebb6d7d84e0014d05b"
+  },
+  {
+    "path": "materials/nexus/939/redviginettept2.vmt",
+    "size": 186,
+    "crc": 2056008076,
+    "sha256": "e151b8ce128c97916a765d6289a6164189581635d0f3c2873e0f613332f4f68e"
+  },
+  {
+    "path": "materials/nexus/939/redviginettept2.vtf",
+    "size": 524432,
+    "crc": 3910970537,
+    "sha256": "3def5f4596d9892a846a1506b9bd9fc726298a1639834d85b1af923a3b48580a"
+  },
+  {
+    "path": "materials/nexus/hud/ability1icon.vmt",
+    "size": 114,
+    "crc": 1712445476,
+    "sha256": "47926a8a4f2d18b507e45ec02d2df66060737b1dced3521af6fc170e977029db"
+  },
+  {
+    "path": "materials/nexus/hud/ability1icon.vtf",
+    "size": 4194512,
+    "crc": 4077931578,
+    "sha256": "3976caff778988ef9e669c740951056105be5708dcf77a08286741f121084ad4"
+  },
+  {
+    "path": "materials/nexus/hud/ability2icon.vmt",
+    "size": 114,
+    "crc": 3109603473,
+    "sha256": "6c6d1a3e9a4346452686d16524720739c7f33fe3dc330ccf3fdd47badd091eaf"
+  },
+  {
+    "path": "materials/nexus/hud/ability2icon.vtf",
+    "size": 4194512,
+    "crc": 847008960,
+    "sha256": "c21d923fd0d7d1689fc668289bac4d291800fee547a99ff6bd3c3f86e3b643ef"
+  },
+  {
+    "path": "materials/nexus/hud/ability3icon.vmt",
+    "size": 114,
+    "crc": 4087334658,
+    "sha256": "e42ac19183eb411a5af1707650414ad81a9117b26e96f025714f66bf75d9ec12"
+  },
+  {
+    "path": "materials/nexus/hud/ability3icon.vtf",
+    "size": 5592640,
+    "crc": 3065580015,
+    "sha256": "1db5a87b760a8d6f40f6117eef2fe4012fa85ba1eadb8122522b02f9bf663fe9"
+  },
+  {
+    "path": "materials/nexus/hud/abilitybg.vmt",
+    "size": 111,
+    "crc": 3347786915,
+    "sha256": "a58bb3495ba27206bd5d318fed553bdaf02af4e07c2fbe84d67e711bb7de30ce"
+  },
+  {
+    "path": "materials/nexus/hud/abilitybg.vtf",
+    "size": 4194512,
+    "crc": 3243631190,
+    "sha256": "e596aef0defdfb8473057e22e6fabdec27295bf6b2d449d2d6d73351187fbbed"
+  },
+  {
+    "path": "materials/nexus/mimicicons/blast.png",
+    "size": 32597,
+    "crc": 1167953963,
+    "sha256": "c4cbb88620ca43696e6ad1957d2e5d41f939b2339cfa67d764e67dfe57ed3187"
+  },
+  {
+    "path": "materials/nexus/mimicicons/chikn.png",
+    "size": 603291,
+    "crc": 3567618348,
+    "sha256": "9281e850d71051f105ec964083983d502938e59ad1ea001e764e0905dcc90efd"
+  },
+  {
+    "path": "materials/nexus/mimicicons/dark.png",
+    "size": 218746,
+    "crc": 1092613177,
+    "sha256": "9b1d20565d3b166c5337ef05ad9315ebcd3ee9f2318026729231d647eea1d821"
+  },
+  {
+    "path": "materials/nexus/mimicicons/eddygar.png",
+    "size": 25085,
+    "crc": 470229085,
+    "sha256": "ec8789456f6290e001853d27437b515774e57c08b8d4335592ab2f9f2af14f5d"
+  },
+  {
+    "path": "materials/nexus/mimicicons/gentoi.png",
+    "size": 20535,
+    "crc": 1986730936,
+    "sha256": "2d74baa17c8e472656c81e46301cbcbf3e63740f5922d7ea9443fa0f33707af1"
+  },
+  {
+    "path": "materials/nexus/mimicicons/nexus.png",
+    "size": 699678,
+    "crc": 2487875295,
+    "sha256": "759e549651fd4d33be6229e0c9cb7a653ee50f49694cf6a784dc40bdf9ab00c3"
+  },
+  {
+    "path": "materials/nexus/mimicicons/region.png",
+    "size": 39591,
+    "crc": 1164248315,
+    "sha256": "951340aec4103e5f708f7dfc029509782daf67a4bb05db792dc0fd90d5f1254d"
+  },
+  {
+    "path": "materials/nexus/mimicicons/scpcb.png",
+    "size": 179634,
+    "crc": 2022013426,
+    "sha256": "cd09daff77c8ba762113911a49f14bb8daf041f4b444cff80925a3f5af7773cd"
+  },
+  {
+    "path": "materials/nexus/mimicicons/sky.png",
+    "size": 38742,
+    "crc": 47502665,
+    "sha256": "419ba0ea99634356898a0b1df66090fa7b7e48e910f9b413b2ffd6327c83923e"
+  },
+  {
+    "path": "materials/nexus/mimicicons/slice.png",
+    "size": 48759,
+    "crc": 3227955196,
+    "sha256": "9249038d0fe85c90cb8e3ec120385dd67aedceb831d9685eeda9c7a197c5cf46"
+  },
+  {
+    "path": "materials/pills/pill_nexus_scp939.png",
+    "size": 2824531,
+    "crc": 3326056726,
+    "sha256": "b9cf8271a17201d1a36f89643da1056ec1120c4c40e48686bc419d8165f27535"
+  },
+  {
+    "path": "models/nexus/scp/939/939.dx80.vtx",
+    "size": 589062,
+    "crc": 4211479605,
+    "sha256": "65f670f59885207c255cf49ecc085f88c22d25175a33870aae74d1bddf558d1b"
+  },
+  {
+    "path": "models/nexus/scp/939/939.dx90.vtx",
+    "size": 578922,
+    "crc": 1075225762,
+    "sha256": "9caff6288c0b32cbea50099af77c88c311872e1a381870fed7f47a30166128c9"
+  },
+  {
+    "path": "models/nexus/scp/939/939.mdl",
+    "size": 427092,
+    "crc": 1610878782,
+    "sha256": "873a163394f1c28873a07f104cfadda7b2156b4beac8af531a44114713fd467b"
+  },
+  {
+    "path": "models/nexus/scp/939/939.phy",
+    "size": 286401,
+    "crc": 1690514162,
+    "sha256": "bfedeecfb14f80cce8c3a3b0e103de8547e0baee824556df3a1cd825139e571c"
+  },
+  {
+    "path": "models/nexus/scp/939/939.vvd",
+    "size": 1883968,
+    "crc": 2190138335,
+    "sha256": "27d2a08829f2127f49a1c8094093a62c6004aa99e3a56876e84cf163264c62b2"
+  },
+  {
+    "path": "models/nexus/scp/939/backup/939.dx80.vtx",
+    "size": 589062,
+    "crc": 314563506,
+    "sha256": "c4a5496b4a61a14e031c84bd67acc87ba7ea84a6d6c3410fba9e2445df47acad"
+  },
+  {
+    "path": "models/nexus/scp/939/backup/939.dx90.vtx",
+    "size": 578922,
+    "crc": 2674303730,
+    "sha256": "4718320b83af0576926cbd8c639daed036a47d9fc733b9f52a5a3e35ae0a9a15"
+  },
+  {
+    "path": "models/nexus/scp/939/backup/939.mdl",
+    "size": 402668,
+    "crc": 1067862195,
+    "sha256": "465b81437bb8ae6bb98324a46ee9f6bc8d94d262812894bb92d8ac15ba2578e1"
+  },
+  {
+    "path": "models/nexus/scp/939/backup/939.phy",
+    "size": 286401,
+    "crc": 1613226477,
+    "sha256": "94ba67fc7b2e3f15d4aad1986a3c73b9690d65b0b13a8b3bf2af4cefd787d024"
+  },
+  {
+    "path": "models/nexus/scp/939/backup/939.vvd",
+    "size": 1883968,
+    "crc": 3286138830,
+    "sha256": "5c489ffd5342b3915e518bce58488c26df58f06f2755f0fbf40a41a00cfd5cf6"
+  },
+  {
+    "path": "models/player/wiltos/wmvdeathanims.mdl",
+    "size": 87228,
+    "crc": 1331208693,
+    "sha256": "480b3b5052bf445f7dcece448b8dcad5ce6ea9c1edef9827c0ecaf4436ba64b7"
+  },
+  {
+    "path": "models/xdreanims/f_anm_slot_042.mdl",
+    "size": 1087400,
+    "crc": 2135523514,
+    "sha256": "f1dd76b3080f0bf73934df28d18c6fa22c48b084b6a1c0492afa4163bc36babc"
+  },
+  {
+    "path": "models/xdreanims/m_anm_slot_042.mdl",
+    "size": 1266144,
+    "crc": 1398029794,
+    "sha256": "9e1d364f2b5f756885bb3344c135eb3e3a756e473bf03d1ed291c47e290a4417"
+  },
+  {
+    "path": "resource/fonts/zaicourierpolski1941-yza4q.ttf",
+    "size": 82020,
+    "crc": 2256373709,
+    "sha256": "3f97b5da5b7e28db27db6a0d1dfbcb3cdb631bf71174057b51a711ddeca2c850"
+  },
+  {
+    "path": "sound/nexus/939/939growl.mp3",
+    "size": 106012,
+    "crc": 2361188529,
+    "sha256": "134cfcf9311d5112fc4bc14a650f51f3e8be8107e35771c77045093411c38486"
+  },
+  {
+    "path": "sound/nexus/939/939isnear.mp3",
+    "size": 985311,
+    "crc": 1012279967,
+    "sha256": "caafab12e257d7ad0a699c6d059d0a159dfc1c46e4f688aab692d0c1eb786b84"
+  },
+  {
+    "path": "sound/nexus/939/939spotted-01.mp3",
+    "size": 71737,
+    "crc": 748748160,
+    "sha256": "9157df3aa5abeaf15296533b103dec073858eef37bd0b7a0924526b2d00deb4a"
+  },
+  {
+    "path": "sound/nexus/939/939spotted-02.mp3",
+    "size": 73405,
+    "crc": 1295882483,
+    "sha256": "d02b95d19e1169d4ec7a204d2674606e28c691ba672195a52d4a8a448cbf3711"
+  },
+  {
+    "path": "sound/nexus/939/939spotted-03.mp3",
+    "size": 67963,
+    "crc": 3010965200,
+    "sha256": "a7c15816e6828b920fa4f537a3e2aa23b2f9bac023ae3dfbb69c18b9945d0cd4"
+  },
+  {
+    "path": "sound/nexus/939/939spotted-04.mp3",
+    "size": 141398,
+    "crc": 2604980629,
+    "sha256": "0502088350df2835d94af485e7941bece0bbdd3d286ca5da83cff6354548c535"
+  },
+  {
+    "path": "sound/nexus/939/939spotted-05.mp3",
+    "size": 153226,
+    "crc": 2259505965,
+    "sha256": "ce0070734a42c1c2e1f1459478ca2b857c685975c26db544cd68abbf4338f81c"
+  },
+  {
+    "path": "sound/nexus/939/939spotted-06.mp3",
+    "size": 50474,
+    "crc": 2076052518,
+    "sha256": "17aa4e4b554d63f990292948a8a9068894ea5a7a44bc0efd11a07e0b6a143d5b"
+  },
+  {
+    "path": "sound/nexus/939/amensticbreathing.mp3",
+    "size": 411258,
+    "crc": 536132413,
+    "sha256": "491bcd1e90536bed2c64424d6055b5e5092da311f1757db3964832ea05db23df"
+  },
+  {
+    "path": "sound/nexus/939/amensticgas.mp3",
+    "size": 250187,
+    "crc": 3933229425,
+    "sha256": "d2c6281a2a6dc67c47e1221e981ca4a0755d5934c523db5467dd40dac27073c9"
+  },
+  {
+    "path": "sound/nexus/939/mimicry/scpcbvl-01.mp3",
+    "size": 30842,
+    "crc": 2290420720,
+    "sha256": "466539ad50a5cba1a9ce0df1b829491bffb1018dbd881be955582130299f1661"
+  },
+  {
+    "path": "sound/nexus/939/mimicry/scpcbvl-02.mp3",
+    "size": 43476,
+    "crc": 210884955,
+    "sha256": "ecb0176cae3f5b773d799a574963b4d73a52bf2e896847736a549894652e2bd3"
+  },
+  {
+    "path": "sound/nexus/939/mimicry/scpcbvl-03.mp3",
+    "size": 59048,
+    "crc": 3471867018,
+    "sha256": "380ec5a73ae834efbcefa500bafb59ac94700287ce6072e5922cd4d1d2962d7d"
+  },
+  {
+    "path": "sound/nexus/939/mimicry/scpcbvl-04.mp3",
+    "size": 55263,
+    "crc": 138065470,
+    "sha256": "83886287d71a7366f99211d0128b6f5beb2da230043fabf2906b3b3d6b7d0da1"
+  },
+  {
+    "path": "sound/nexus/939/mimicry/scpcbvl-05.mp3",
+    "size": 40574,
+    "crc": 3876122200,
+    "sha256": "e540140f08ab0fbd88edc8800c1022187552a125e02a78124c1dd0e3b2a7e46e"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-01.mp3",
+    "size": 26130,
+    "crc": 3044919252,
+    "sha256": "9790f2c5a00bcde322e6e316d4a965b74a2e6ee0b15e9f354a672946b2117dea"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-02.mp3",
+    "size": 30672,
+    "crc": 2782818944,
+    "sha256": "6959fb09c45f9bfa1a3c48083a3c8ed326248d0b1cbd0abcb2577e47862a5ac2"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-03.mp3",
+    "size": 46878,
+    "crc": 2708873043,
+    "sha256": "0cc098a87924a2a2fd3a9a4117509417f8787df66a59bdd498ae316a8ad39490"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-04.mp3",
+    "size": 56469,
+    "crc": 3504016614,
+    "sha256": "15bdcd9fcce9f953ec29b3e7876bf51c2735f02c7d52bc1e965800748930955c"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-06.mp3",
+    "size": 61614,
+    "crc": 701470161,
+    "sha256": "22cf90e246dca7a1f1dcbd789cc1622cd4d83700b10f7d903069c6af4abbb50b"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-07.mp3",
+    "size": 80636,
+    "crc": 1161665639,
+    "sha256": "e0e9337204c479611b2541cb81f0935af1b800a8649c309f8d88d57cf51792b5"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/chikn voiceline-08.mp3",
+    "size": 49658,
+    "crc": 1332046861,
+    "sha256": "c5afc555487fa59e704bae884beb3a3017ad4ea7036f80dd3a2ecb18cb8db265"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark1.wav",
+    "size": 509996,
+    "crc": 115297833,
+    "sha256": "365c11cd99d0124eb4b164d7332bf4da8b932cdaa7816f7f74336816fdde054e"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark2.wav",
+    "size": 239660,
+    "crc": 146942198,
+    "sha256": "2a683e770bb8e3c2bf6affcf78c10c29b949cfcb97cdcc98916050e165993c9d"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark3.wav",
+    "size": 192552,
+    "crc": 1176319456,
+    "sha256": "42878f16687c863287904861ef939d96ed5b980f2d7d76f1901a43a3d85a7955"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark4.wav",
+    "size": 491560,
+    "crc": 2722480862,
+    "sha256": "59a1d778e32e80b0e08fbe0f73cef4f15dabfdfd559e85cd9c5de77404ff4304"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark5.wav",
+    "size": 179352,
+    "crc": 2013881841,
+    "sha256": "ee9c40706c4fe051363ec67dd1135ccf326491868df7ec2bb65d284042e6b7c9"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark6.wav",
+    "size": 627864,
+    "crc": 3202814063,
+    "sha256": "538ef0b4834b7a614626faa1cc5992e559d2091c7fe7ab4ab6aa33a956afec95"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark7.wav",
+    "size": 309912,
+    "crc": 466532311,
+    "sha256": "066374c57cd583908d689bc705318c50d7bee6b240f35ee51cbf61d038b8b0ee"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/dark8.wav",
+    "size": 399512,
+    "crc": 1057735970,
+    "sha256": "b380bfdc17def7b8529fd464f269cd374f027110f1a77122b00dd30fddc6a91c"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/eddy1.mp3",
+    "size": 43256,
+    "crc": 1212825802,
+    "sha256": "e90598a0f3f1f83a89952890055033300a359214c9a3df89b37718d96bfc7539"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/eddy2.mp3",
+    "size": 27225,
+    "crc": 4276499775,
+    "sha256": "5b4cd8e15d848e1f0fd194ec34e4c98c0ab9218f4e34c303186335920792437c"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/eddy3.mp3",
+    "size": 22321,
+    "crc": 2944789077,
+    "sha256": "ecd21d0d23a0b6c5b7aa7194e90529885c645e4668068e31ce3f4921ff8b2780"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/eddy4.mp3",
+    "size": 29102,
+    "crc": 4145399513,
+    "sha256": "3dead5bebd6d440ee55720691c5512ca03188ec2c2765e17d574c3a5e6cdcdb3"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline1.mp3",
+    "size": 17522,
+    "crc": 1919329770,
+    "sha256": "ba469f6b9d4c86d8e1b125a5ccda3affdf31d261cc75cdea1ef901f0850e16c0"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline2.mp3",
+    "size": 20235,
+    "crc": 1491145912,
+    "sha256": "a0487af3c7f56ea2913bdb13cb8e01e6ded4558fc741522d67924fa765e5c2f6"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline3.mp3",
+    "size": 17835,
+    "crc": 2681666466,
+    "sha256": "52c1b11243932e6b44ab866b0b4b9cbc8d23ef02af2f57c7e636f7bec6f112b0"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline4.mp3",
+    "size": 21644,
+    "crc": 3911850703,
+    "sha256": "3bf0249304f02346fb05d7f0d6549da459c1abc40927c97c15fe9f4f677e5161"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline6.mp3",
+    "size": 24354,
+    "crc": 1180821918,
+    "sha256": "0a4553646125e1c64e9ade4738f88f7dd22b7a1e4703b3cab9ea94663361a873"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline7.mp3",
+    "size": 28164,
+    "crc": 475628934,
+    "sha256": "b56abf4438665456794fc4a97bccd94e3b5f9d711b31c04b97b2f73d33b6ef31"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/gentoivoiceline8.mp3",
+    "size": 20862,
+    "crc": 574678460,
+    "sha256": "e30c974c967ed13567f454e202c30c46fb9a81837c2d547227181407e6eb7ca9"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexus 1.mp3",
+    "size": 32997,
+    "crc": 1340618525,
+    "sha256": "47c66866ec7095672a27a5ca0999ce52fe281dad703f0a632ee460a419e4a547"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexus 2.mp3",
+    "size": 73142,
+    "crc": 613599599,
+    "sha256": "2e2c3d11c358fe4d4f6d3c159710a90888db31b27c0a633419634509c8c4b70b"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexus 3.mp3",
+    "size": 50471,
+    "crc": 2613080261,
+    "sha256": "804ff2ed325fb79f063ae12f9fe8e4c957ea9de2a7fc7ca4f516b18ca48bbba9"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexus 4.mp3",
+    "size": 126474,
+    "crc": 4005810755,
+    "sha256": "0fa8249936596b9d806dfdc9c600220858255b1b88aaae49789f0f2b07a2b859"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexus 5.mp3",
+    "size": 41318,
+    "crc": 1970945275,
+    "sha256": "8d35d49e7a4ef3f58229d3a1479829f9c2ffdfc8f07548f28ff8f917c49892ed"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexuslines-01.mp3",
+    "size": 28594,
+    "crc": 2344793309,
+    "sha256": "849f65b050233932ebb06cf511c408dc2c3772abda9054829f0d109a1d64ee96"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexuslines-02.mp3",
+    "size": 38173,
+    "crc": 4043705646,
+    "sha256": "53620473accbe975f326aab02480dac27573d5c91e4394ac6425629ef25abd1a"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexuslines-03.mp3",
+    "size": 33319,
+    "crc": 59962892,
+    "sha256": "81641c4a06a4ddd52a82bcff1fc76a305dcf27ca29807233125317e5b15f0d43"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/nexuslines-04.mp3",
+    "size": 57602,
+    "crc": 1183048840,
+    "sha256": "0d994f39acd01fe29093c73cedac5e3fda363ac4991627afd621974acd939b0c"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/playermimicry-01.mp3",
+    "size": 12132,
+    "crc": 710950463,
+    "sha256": "0967159322175a573914a9bdd80d958e77dd16104641cba6ed90d6bf14c50e58"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/playermimicry-02.mp3",
+    "size": 34225,
+    "crc": 470722205,
+    "sha256": "74441bf9382d56b00d0276efc1a525812b9f32ca3def9f2951cef69dc2b8363b"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/playermimicry-03.mp3",
+    "size": 40870,
+    "crc": 687547202,
+    "sha256": "1d00110766889693f57140daa7c549f6f35ba234a7d8b49fcdaaf2bbcb71ec01"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/playermimicry-04.mp3",
+    "size": 45114,
+    "crc": 1937628161,
+    "sha256": "1cfbbb75a252df2d2591e32ba79088647ec73b8f0928b25a9e9062ecf51154c0"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/region1.mp3",
+    "size": 16808,
+    "crc": 753390810,
+    "sha256": "9fe25b042b57cf818a216f3a66c2aba10cff1cb4d797b9928d323534e132816f"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/region2.mp3",
+    "size": 13527,
+    "crc": 1277120407,
+    "sha256": "d2facf1b69abde93580ae6bfce283a0ef4f24b93c547a1e92cf1003443df93f8"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/region3.mp3",
+    "size": 19918,
+    "crc": 293735535,
+    "sha256": "ad9e3d818d87050941cab2fc4096e79ef19dcf6ec53b21c2fa1c0fbc3529e37f"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/region4.mp3",
+    "size": 26005,
+    "crc": 286207749,
+    "sha256": "2ef954ddb86cd1d0ecb1ccbe9fcd87e65c3646bf996f303f43b7ac5391060d1d"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/slicevoice-01.mp3",
+    "size": 14178,
+    "crc": 907045166,
+    "sha256": "2dced8860c2be784073599d877442a193bf17e9f778deeff8d2d1f8eff1da8e1"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/slicevoice-02.mp3",
+    "size": 17649,
+    "crc": 3680172750,
+    "sha256": "fdf79845106119cfb9018986822ffd345e86d4d1005c8a62a6dbb9d68f560975"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/slicevoice-03.mp3",
+    "size": 18978,
+    "crc": 418418082,
+    "sha256": "8529df734460db540199801495316052e73b80c1f309467d2b077c2ac4b1c69a"
+  },
+  {
+    "path": "sound/nexus/939/playermimicry/slicevoice-04.mp3",
+    "size": 24178,
+    "crc": 2846838025,
+    "sha256": "ffa0eb601c301ef7d4bc5a615de152dd8629408c46b34dfe7a220fd92bf90724"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep1.mp3",
+    "size": 7197,
+    "crc": 4158635281,
+    "sha256": "bb69f776de81b4cafba0d4cddd6cbd73730a39a2c969e36cf528c68039948195"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep2.mp3",
+    "size": 7248,
+    "crc": 3881413028,
+    "sha256": "aaa8e5c0d2acd741c28dee38b48a045627758cdb964cf2dd9d6aed85720d4baf"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep3.mp3",
+    "size": 7248,
+    "crc": 2375299034,
+    "sha256": "29adccf71238786d36002e430731ed3795f9eddeaf24626d729f8b18ffd424e2"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep4.mp3",
+    "size": 7089,
+    "crc": 1565901219,
+    "sha256": "62d5a4898e784d2ce085a7dea1a2218f98e598a89e62ec9114c74bf535bd0399"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep5.mp3",
+    "size": 7274,
+    "crc": 4111576784,
+    "sha256": "c08072d87d3a4c2410d062900b427283b5bcfeb6bef2d12d74dc319e62ef2023"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep_crouch1.mp3",
+    "size": 5737,
+    "crc": 455246180,
+    "sha256": "63f85762f32b576ac2c4e160bfd08ffc9bf13f0e5b1616be42d1be443ab00a2c"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep_crouch2.mp3",
+    "size": 5632,
+    "crc": 4231084558,
+    "sha256": "ddf16a73ad42c6a290103b3420bdb7a38a9fe874db557f5a39deb87fd3701812"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep_crouch3.mp3",
+    "size": 5319,
+    "crc": 289261953,
+    "sha256": "36e2e6232ff0ed00f242148058c71ed4c0624e33480974a127abbf0dd8ae0a90"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep_crouch4.mp3",
+    "size": 5215,
+    "crc": 4174049659,
+    "sha256": "03c36d03981ee9d79b757f3052cd550b8e3ab67faae26ba8efbba9c26c3c406f"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_footstep_crouch5.mp3",
+    "size": 6494,
+    "crc": 3064960113,
+    "sha256": "87f90a5de3f7086daf02207017beb6d3baf19bdc2d68b7fa8ebf677949d14bf9"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_idle.mp3",
+    "size": 192583,
+    "crc": 3853872567,
+    "sha256": "709d070b1cdf942961eb7330da1c41410b42feef30216a844571468c2cfe0d71"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_kill.mp3",
+    "size": 5997,
+    "crc": 825855704,
+    "sha256": "30defa9f744a4248575fbffadfe0b7f329589697037921c2c447d96bdd38dadc"
+  },
+  {
+    "path": "sound/nexus/939/scp_939_kill2.mp3",
+    "size": 27065,
+    "crc": 2854793623,
+    "sha256": "29dfadac03725de9cfcb94992b6ee76755fb902e61a0caac517b5d5d166e90ff"
+  }
+]

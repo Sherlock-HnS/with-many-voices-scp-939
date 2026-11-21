@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+    "$basetexture" "nexus/hud/ability1icon"
+    "$translucent" "1"
+    "$color2" "[1 1 1]"
+}
