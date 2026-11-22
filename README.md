@@ -1,4 +1,4 @@
-[PILL PACK] With Many Voices | SCP-939
+# [PILL PACK] With Many Voices | SCP-939
 
 ![Workshop preview](workshop-preview.jpg)
 
