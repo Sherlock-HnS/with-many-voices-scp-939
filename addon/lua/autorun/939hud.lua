@@ -208,6 +208,7 @@ local function GetCooldown(slotId)
 end
 
 hook.Add("HUDPaint", "WMV_AbilityHUD", function()
+    if SherlockHNS then return end
     local hud = GetActiveHUD()
     if not hud then return end
 

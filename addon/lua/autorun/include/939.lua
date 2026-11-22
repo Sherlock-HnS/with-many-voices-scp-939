@@ -1,3 +1,4 @@
+local hnsActions = {}
 local function GetPillEnt(ply)
     if not IsValid(ply) then return nil end
     if pk_pills and pk_pills.getMappedEnt then
@@ -171,13 +172,10 @@ hook.Add("OnEntityCreated", "wmvt_initialize_gem_2", function(ent)
                         end
 
                         if self.animFreeze and not self.plyFrozen then
-                            ply:SetWalkSpeed(ply:GetWalkSpeed() / 2)
-                            ply:SetRunSpeed(ply:GetWalkSpeed() / 2)
+                            self:ApplyMoveSpeed()
                             self.plyFrozen = true
                         elseif not self.animFreeze and self.plyFrozen then
-                            local speed = self.formTable.moveSpeed or {}
-                            ply:SetWalkSpeed(speed.walk or 200)
-                            ply:SetRunSpeed(speed.run or speed.walk or 500)
+                            self:ApplyMoveSpeed()
                             self.plyFrozen = nil
                         end
 
@@ -334,7 +332,7 @@ hook.Add("OnEntityCreated", "wmvt_initialize_gem_2", function(ent)
                         --water death
                         self.touchingWater = ply:WaterLevel() > 1
 
-                        if (self.formTable.damageFromWater and self.touchingWater) then
+                        if not SherlockHNS and self.formTable.damageFromWater and self.touchingWater then
                             if self.formTable.damageFromWater == -1 then
                                 --self:PillDie()
                                 ply:Kill()
@@ -385,7 +383,7 @@ hook.Add("OnEntityCreated", "wmvt_initialize_gem_2", function(ent)
                         end
 
                         --charge
-                        if self:GetChargeTime() ~= 0 then
+                        if not SherlockHNS and self:GetChargeTime() ~= 0 then
                             if ply:OnGround() then
                                 local charge = self.formTable.charge
                                 local angs = ply:EyeAngles()
@@ -1102,6 +1100,14 @@ local function wmvjackietien_jumpscare(ply, ent, duration, customanimstuff)
                 break
             end
         end
+    end
+
+    if SherlockHNS and IsValid(jumpscare_entity) and jumpscare_entity:IsPlayer() then
+        return pk_pills.playHNSJumpscare(ply, ent, jumpscare_entity, duration, {
+            camera = "wmv_jumpscare_gen",
+            onStart = customanimstuff,
+            attachment = "camera",
+        })
     end
 
     if jumpscare_entity ~= nil then
@@ -2256,6 +2262,10 @@ local function WMV_StartAbilityCooldown(ply, ent, slotId, duration, nextVar)
     if not SERVER then return false end
     if not IsValid(ply) or not IsValid(ent) then return false end
 
+    if SherlockHNS and SherlockHNS.Ability.Has(ply, slotId) then
+        SherlockHNS.Ability.SetCooldown(ply, slotId, duration)
+        return true
+    end
     ent[nextVar] = ent[nextVar] or 0
 
     if ent[nextVar] > CurTime() then
@@ -2434,13 +2444,23 @@ if SERVER then
         end)
     end
 
-    hook.Add("PlayerButtonDown", "WMV_939_GasAbility_KEY2", function(ply, button)
+    local wmv_amnesticgas = function(ply, button)
         if button ~= WMV_GAS_KEY then return end
     
         local ent = GetPillEnt(ply)
         if not WMV_Is939PillEnt(ent) then return end
     
         WMV_Start939GasAbility(ply, ent)
+    end
+    hnsActions.wmv_amnesticgas = function(ply) return wmv_amnesticgas(ply, KEY_2) end
+    hook.Add("PlayerButtonDown", "WMV_939_GasAbility_KEY2", function(ply, button)
+        if button ~= KEY_2 then return end
+        if SherlockHNS then
+            local ent = GetPillEnt(ply)
+            if WMV_Is939PillEnt(ent) then SherlockHNS.Ability.Use(ply, "wmv_amnesticgas") end
+        else
+            wmv_amnesticgas(ply, button)
+        end
     end)
 
     hook.Add("Think", "WMV_939_GasCloudThink", function()
@@ -3258,6 +3278,7 @@ if SERVER then
         ent:SetNWFloat("WMV_MIMIC_CD_END", endTime)
         ent:SetNWFloat("WMV_MIMIC_CD_DUR", WMV_MIMIC_COOLDOWN)
     
+        if SherlockHNS then return end
         if WMV_StartAbilityCooldown then
             WMV_StartAbilityCooldown(ply, WMV_MIMIC_HUD_ID, WMV_MIMIC_COOLDOWN)
         elseif wmv_StartAbilityCooldown then
@@ -3353,26 +3374,35 @@ if SERVER then
         net.Send(ply)
     end
 
-    hook.Add("PlayerButtonDown", "WMV_939_Mimicry_KEY3", function(ply, button)
+    local wmv_mimicry = function(ply, button)
         if button ~= KEY_3 then return end
-        if WMV_939_MimicCooldownLeft(ent) > 0 then
+        local ent = GetPillEnt(ply)
+        if not WMV_Is939PillEnt(ent) then return end
+        if not SherlockHNS and WMV_939_MimicCooldownLeft(ent) > 0 then
             net.Start("WMV_939_MimicFeedback")
             net.WriteString("deny")
             net.Send(ply)
             return
         end
 
-        local ent = GetPillEnt(ply)
-        if not WMV_Is939PillEnt(ent) then return end
-
         if ent:GetNWBool("WMV_MIMIC_MENU_OPEN", false) then
             WMV_939_PlaySelectedMimic(ply, ent)
         else
             WMV_939_OpenMimicMenu(ply, ent)
         end
+    end
+    hnsActions.wmv_mimicry = function(ply) return wmv_mimicry(ply, KEY_3) end
+    hook.Add("PlayerButtonDown", "WMV_939_Mimicry_KEY3", function(ply, button)
+        if button ~= KEY_3 then return end
+        if SherlockHNS then
+            local ent = GetPillEnt(ply)
+            if WMV_Is939PillEnt(ent) then SherlockHNS.Ability.Use(ply, "wmv_mimicry") end
+        else
+            wmv_mimicry(ply, button)
+        end
     end)
 
-    hook.Add("PlayerButtonDown", "WMV_939_Mimicry_R_Cycle", function(ply, button)
+    local wmv_cycle = function(ply, button)
         if button ~= KEY_R then return end
 
         local ent = GetPillEnt(ply)
@@ -3380,6 +3410,16 @@ if SERVER then
         if not ent:GetNWBool("WMV_MIMIC_MENU_OPEN", false) then return end
 
         WMV_939_CycleMimic(ply, ent)
+    end
+    hnsActions.wmv_cycle = function(ply) return wmv_cycle(ply, KEY_R) end
+    hook.Add("PlayerButtonDown", "WMV_939_Mimicry_R_Cycle", function(ply, button)
+        if button ~= KEY_R then return end
+        if SherlockHNS then
+            local ent = GetPillEnt(ply)
+            if WMV_Is939PillEnt(ent) then SherlockHNS.Ability.Use(ply, "wmv_cycle") end
+        else
+            wmv_cycle(ply, button)
+        end
     end)
 
     hook.Add("SetupMove", "WMV_939_BlockReloadWhileMimicMenuOpen", function(ply, mv, cmd)
@@ -3544,7 +3584,7 @@ if CLIENT then
 end
 
 if SERVER then
-    hook.Add("PlayerButtonDown", "WMV_939_SenseAbility_KEY1", function(ply, button)
+    local wmv_extendrange = function(ply, button)
         if button ~= KEY_1 then return end
 
         local ent = GetPillEnt(ply)
@@ -3566,6 +3606,16 @@ if SERVER then
 
             ply:EmitSound(WMV_SENSE_SOUND, 75, 100, 1, CHAN_AUTO)
         end)
+    end
+    hnsActions.wmv_extendrange = function(ply) return wmv_extendrange(ply, KEY_1) end
+    hook.Add("PlayerButtonDown", "WMV_939_SenseAbility_KEY1", function(ply, button)
+        if button ~= KEY_1 then return end
+        if SherlockHNS then
+            local ent = GetPillEnt(ply)
+            if WMV_Is939PillEnt(ent) then SherlockHNS.Ability.Use(ply, "wmv_extendrange") end
+        else
+            wmv_extendrange(ply, button)
+        end
     end)
 end
 
@@ -3892,6 +3942,18 @@ end
                 end
             end
     
+            if SherlockHNS and IsValid(entity) and entity:IsPlayer() then
+                return pk_pills.playHNSJumpscare(ply, ent, entity, 0.7, {
+                    camera = "wmv_jumpscare_gen",
+                    offset = 50,
+                    animation = "jumpscare",
+                    sound = "jumpscare",
+                    attachment = "camera",
+                    ownerCamera = "wmv_pilljumpscare_gen",
+                    ownerAttachment = "pillcamera",
+                })
+            end
+
             if not IsValid(entity) then return end
             ent:SetNWBool("WMV_MIDKILL", true)
 
@@ -4099,6 +4161,21 @@ noragdoll=true,
     jump=function(ply,ent)
         
     end
-})
+}, function(form)
+    -- The legacy damage branches are for Sandbox and NPCs.
+    form.hnsKillAPI = true
+    form.hnsAbilities = {
+        { id = "wmv_amnesticgas", name = "Gás amnésico", keyLabel = "2", OnUse = hnsActions.wmv_amnesticgas },
+        { id = "wmv_mimicry", name = "Imitar voz", keyLabel = "3", OnUse = hnsActions.wmv_mimicry },
+        { id = "wmv_cycle", name = "Selecionar voz", keyLabel = "R", OnUse = hnsActions.wmv_cycle },
+        { id = "wmv_extendrange", name = "Ampliar sentidos", keyLabel = "1", OnUse = hnsActions.wmv_extendrange },
+        { id = "attack", name = "Ataque", key = IN_ATTACK, OnUse = form.attack.func },
+        { id = "voice", name = "Vocalização", key = IN_ATTACK2, OnUse = form.attack2.func },
+    }
+    form.attack, form.attack2, form.reload = nil, nil, nil
+    pk_pills.bindHNSButtons(form, "wmvThermalVision", {
+        { id = "thermal", name = "Visão térmica", button = KEY_N, keyLabel = "N", cooldown = 0.2 },
+    })
+end)
 
 
