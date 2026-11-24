@@ -1090,19 +1090,23 @@ local function wmvjackietien_jumpscare(ply, ent, duration, customanimstuff)
 
     local jumpscare_entity = nil
 
+if SherlockHNS then
+    jumpscare_entity = SherlockHNS.FindVictim(ply, ent:LocalToWorld(Vector(0, 0, 50)), 90)
+else
     for _, ent2 in pairs(ents.FindInSphere(ent:LocalToWorld(Vector(0, 0, 50)), 90)) do
-        if (ent2:IsPlayer() or ent2:IsNextBot() or ent2:IsNPC()) and ent2:Health() >= 0.1 then
-            if ent2 == ply then continue end
-            if ent2:IsPlayer() and ent2:Team() == TEAM_SPECTATOR then continue end
-
-            if IsValid(ent2) then
-                jumpscare_entity = ent2
-                break
+            if (ent2:IsPlayer() or ent2:IsNextBot() or ent2:IsNPC()) and ent2:Health() >= 0.1 then
+                if ent2 == ply then continue end
+                if ent2:IsPlayer() and ent2:Team() == TEAM_SPECTATOR then continue end
+    
+                if IsValid(ent2) then
+                    jumpscare_entity = ent2
+                    break
+                end
             end
         end
-    end
+end
 
-    if SherlockHNS and IsValid(jumpscare_entity) and jumpscare_entity:IsPlayer() then
+if SherlockHNS and IsValid(jumpscare_entity) and jumpscare_entity:IsPlayer() then
         return pk_pills.playHNSJumpscare(ply, ent, jumpscare_entity, duration, {
             camera = "wmv_jumpscare_gen",
             onStart = customanimstuff,
