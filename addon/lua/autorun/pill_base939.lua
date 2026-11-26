@@ -13,4 +13,5 @@ if !pcall(require,"pk_pills") then
 end
 
 AddCSLuaFile()
+AddCSLuaFile("include/939.lua")
 include("include/939.lua")
